@@ -1,0 +1,10 @@
+<div
+  class="album"
+  [ngClass]="{
+    active:
+      album.collectionId === (state.getCurrentAlbum() | async)?.collectionId
+  }"
+>
+  <img src="{{ album.artworkUrl100 }}" alt="{{ album.collectionName }}" />
+  <p title="{{ album.collectionName }}">{{ album.collectionName }}</p>
+</div>

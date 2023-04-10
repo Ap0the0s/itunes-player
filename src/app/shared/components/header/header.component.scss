@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    display: none;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+
+    img {
+      width: 32px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__search {
+    width: 30%;
+
+    .k-autocomplete {
+      width: 100%;
+    }
+  }
+}

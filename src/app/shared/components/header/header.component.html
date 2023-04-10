@@ -1,0 +1,24 @@
+<header class="header k-toolbar k-toolbar-md">
+  <div class="header__title">
+    <img src="/assets/images/itunes.png" alt="" />
+    iTunes Player
+  </div>
+
+  <app-player></app-player>
+
+  <div class="header__search">
+    <kendo-autocomplete
+      #autocomplete
+      [data]="searchResults"
+      valueField="artistName"
+      [filterable]="true"
+      placeholder="e.g. Metallica"
+      (valueChange)="setCurrentArtist($event)"
+    >
+      <ng-template kendoAutoCompleteItemTemplate let-artist>
+        <span style="color: #00f">{{ artist.artistName }}</span>
+      </ng-template>
+      <ng-template kendoAutoCompleteNoDataTemplate>No results</ng-template>
+    </kendo-autocomplete>
+  </div>
+</header>

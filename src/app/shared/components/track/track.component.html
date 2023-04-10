@@ -1,0 +1,9 @@
+<div
+  class="track"
+  [ngClass]="{
+    active: track.previewUrl === (state.getCurrentTrackSrc() | async)
+  }"
+>
+  <img src="{{ track.artworkUrl30 }}" alt="{{ track.trackName }}" />
+  <span>{{ track.trackName }}</span>
+</div>
